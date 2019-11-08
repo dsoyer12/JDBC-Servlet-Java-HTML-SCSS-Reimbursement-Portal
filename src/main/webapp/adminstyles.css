@@ -1,0 +1,97 @@
+body {
+    background-image: url("wp4318134.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.h2 {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+footer {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    float: right;
+    padding: .5%;
+    bottom: 0;
+}
+
+.pagecontent {
+    font-family: 'Open Sans', sans-serif;
+    /* margin-left: 10%; */
+    /* margin-right: 10%; */
+    padding: 2%;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    min-height: 60rem;
+    background-color: white;
+}
+
+.profile-usermenu ul li {
+    border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+    border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+    color: #93a3b5;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.profile-usermenu ul li a i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.profile-usermenu ul li a:hover {
+    background-color: #fafcfd;
+    color: #5b9bd1;
+}
+
+.profile-usermenu ul li.active {
+    border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+    color: #5b9bd1;
+    background-color: #f6f9fb;
+    border-left: 2px solid #5b9bd1;
+    margin-left: -2px;
+}
+
+
+/* Profile Content */
+
+.profile-content {
+    padding: 20px;
+    background: #fff;
+}
+
+.jumbotron {
+    background: url('https://c.stocksy.com/a/Neh300/z9/882779.jpg?1566723045') no-repeat center center;
+    background-size: cover;
+}

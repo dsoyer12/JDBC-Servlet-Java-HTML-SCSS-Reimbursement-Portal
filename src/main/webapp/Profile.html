@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Profile</title>
+    <link rel="stylesheet" href="adminstyles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="scripts/check.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <img src="logo_transparent.png" class="navbar-fixed-top" style="   font-family: 'Open Sans', sans-serif !important;position: fixed; z-index:-1; /* Set the navbar to fixed position */
+		margin:10%;" alt="logo">
+    <nav class="navbar navbar-light navbar-fixed-top" style="background-color: #84c4ff; top:0; opacity:0.8;">
+        <img src="logo_transparent.png" style="max-height: 3%; max-width:3%; z-index: 1000; " alt="logo">
+        <span style="padding:0; float: left;margin: 0; color:white; border: solid; border-color: white; padding: .5%;"><h1>FooBar Co.</h1></span>
+        <span style="padding:0; float: left;margin: 0;color:white;"><h2>Help</h2></span>
+        <span style="padding:0; float: left;margin: 0;color:white;"><h2>Support</h2></span>
+        <span style="padding:0; float: left;margin: 0;color:white;"><a  style ="color: white; font-size: 2em;"href="Reimbursement.html">Expense Reimbursement</as></span>
+        <form class="form-inline" style="justify-content: right !important;">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
+
+    <div class="display">
+        <h1 style="border-left:solid;padding: 1%; border-color:white; margin: 1em; color: white; opacity: 0.9;">WELCOME <span id="firstname" style="color:#84c4ff;"></span></h1>
+    </div>
+
+    <div class="pagecontent card-body">
+        <div class="jumbotron">
+            <h1 class="display-4" style="color: white !important;">Work Abroad!</h1>
+            <p class="lead" style="color: white !important;">Opportunities available in 100 cities worldwide!</p>
+            <hr class="my-4">
+            <p style="color: white !important;">Act now to find out about our Employee Exchange program and how you can explore our global company culture</p>
+            <p class="lead">
+                <a class="btn btn-light btn-lg" href="#" role="button">Learn more</a>
+            </p>
+        </div>
+
+        <iframe src="https://www.feedgrabbr.com/inframe/?widgetid=0e1224834f017d74ed71a8001" allowtransparency="true" style=" position: absolute; right:0; border:0;background-color: transparent;width:30%;height:40%"></iframe>
+
+        <div class="container" style=" position: absolute; left: 0;">
+            <div class="row profile">
+                <div class="col-md-3">
+                    <div class="profile-sidebar">
+                        <!-- SIDEBAR USERPIC -->
+                        <div class="profile-userpic">
+                            <img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
+                        </div>
+                        <!-- END SIDEBAR USERPIC -->
+                        <!-- SIDEBAR USER TITLE -->
+                        <div class="profile-usertitle">
+                            <div class="profile-usertitle-name">
+                               <h3><span id="firstname"></span></h3> 
+                            </div>
+                            <div class="profile-usertitle-job">
+                                Developer
+                            </div>
+                        </div>
+                        <!-- END SIDEBAR USER TITLE -->
+                        <!-- SIDEBAR BUTTONS -->
+                        <div class="profile-userbuttons">
+                            <button type="button" class="btn btn-secondary btn-sm">Edit Profile Photo</button>
+                            <button type="button" class="btn btn-info btn-sm">Edit Profile Info</button>
+                        </div>
+                        <!-- END SIDEBAR BUTTONS -->
+                        <!-- SIDEBAR MENU -->
+                        <div class="profile-usermenu">
+                            <ul class="nav">
+                                <li class="active">
+                                    <a href="#">
+                                        <i class="glyphicon glyphicon-home"></i> Overview </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="glyphicon glyphicon-user"></i> Account Settings </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class="glyphicon glyphicon-ok"></i> Tasks </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="glyphicon glyphicon-flag"></i> Help </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- END MENU -->
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="profile-content">
+                        <h4>About</h4>
+                        <li>
+                            Software developer who enjoys code freezes and long walks on the beach
+                        </li>
+                        <br>
+                        <ul class="list-group">
+                            <h4>Skills</h4>
+                            <li class="list-group-item">HTML5</li>
+                            <li class="list-group-item">CSS</li>
+                            <li class="list-group-item"> JAVA</li>
+                            <li class="list-group-item">C++</li>
+                            <li class="list-group-item">Extreme Thumbwrestling</li>
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <form action="logout" method="get" style="padding: 2%; float: right;">
+        <input type="submit" value="logout" />
+    </form>
+    <footer>2019 FooBar & Co<span style="font-family: 'Courier New', Courier, monospace">&#153</span></footer>
+</body>
+
+
+</html>

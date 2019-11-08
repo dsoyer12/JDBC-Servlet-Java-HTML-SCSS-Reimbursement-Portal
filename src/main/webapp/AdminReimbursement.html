@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Reimbursement Portal</title>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous"></script>
+<link rel="stylesheet" href="adminstyles.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	crossorigin="anonymous"></script>
+<script src="scripts/check2.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link
+	href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+	rel="stylesheet">
+
+<script type="text/javascript">
+	$(function() {
+		$('#colorselector').change(function() {
+			$('.colors').hide();
+			$('#' + $(this).val()).show();
+		});
+	});
+</script>
+
+</head>
+
+<body>
+	<img src="logo_transparent.png" class="navbar-fixed-top"
+		style="font-family: 'Open Sans', sans-serif !important; position: fixed; z-index: -1; /* Set the navbar to fixed position */ margin: 10%;"
+		alt="logo">
+	<nav class="navbar navbar-light navbar-fixed-top"
+		style="background-color: #84c4ff; top: 0; opacity: 0.8;">
+		<img src="logo_transparent.png"
+			style="max-height: 5%; max-width: 3%;=" alt="logo">
+		<a href="/servletDemo2/AdminProfile.html">
+			<span
+				style="padding: 0; float: left; margin: 0; color: white; border: solid; border-color: white; padding: .5%;">FooBar
+				Co.</span>
+		</a>
+		<h2>
+			<span style="padding: 0; float: left; margin: 0; color: white;">Help</span>
+		</h2>
+		<h2>
+			<span style="padding: 0; float: left; margin: 0; color: white;">Support</span>
+		</h2>
+
+		<form class="form-inline" style="justify-content: right !important;">
+			<input class="form-control mr-sm-2" type="search"
+				placeholder="Search" aria-label="Search">
+			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		</form>
+	</nav>
+	<div class="display">
+		<h1
+			style="border-left: solid; padding: 1%; border-color: white; margin: 1em; color: white; opacity: 0.9;">
+			WELCOME ADMIN <span id="firstname" style="color: #84c4ff;"></span>
+		</h1>
+	</div>
+
+	<div class="pagecontent">
+
+
+
+
+
+
+
+
+
+
+		<label class="wrapper" for="states">This label is stacked
+			above the select</label>
+		<div class="button dropdown">
+			<select id="colorselector">
+				<option value="red">View All Reimbursements</option>
+				<option value="yellow">View Pending Reimbursements</option>
+				<option value="blue">View Reimbursements by ID</option>
+				<option value="purple">Create Reimbursement</option>
+			</select>
+		</div>
+
+		<div class="output">
+			<div id="red" class="colors red">
+				<div id="showALL" style="display: none;">
+					<table class="table" style="">
+						<thead>
+
+							<tr>
+								<th scope="col">Manager_ID</th>
+								<th scope="col">Reimbursement Number</th>
+								<th scope="col">Employee_Name</th>
+								<th scope="col">Description</th>
+								<th scope="col">Amount</th>
+								<th scope="col">PostDate</th>
+								<th scope="col">Resolvedate</th>
+								<th scope="col">ReimbursmentStatus</th>
+							</tr>
+
+						</thead>
+						<tbody id="tablebod">
+						</tbody>
+
+
+					</table>
+				</div>
+
+
+				<form type="button" id="showAllTable1 " onclick="toggleTable();">Show
+					All Reimbursements</form>
+			</div>
+			<div id="yellow" class="colors yellow"  style="display:none;">
+				<div id="showALL2" style="display: none;">
+					<table class="table" style="">
+						<thead>
+
+							<tr>
+								<th scope="col">Manager_ID</th>
+								<th scope="col">Reimbursement Number</th>
+								<th scope="col">Employee_Name</th>
+								<th scope="col">Description</th>
+								<th scope="col">Amount</th>
+								<th scope="col">PostDate</th>
+								<th scope="col">Resolvedate</th>
+								<th scope="col">ReimbursmentStatus</th>
+							</tr>
+
+						</thead>
+						<tbody id="tablebod2">
+						</tbody>
+
+
+					</table>
+				</div>
+
+
+				<form type="button" id="showAllTable2 " onclick="toggleTable2();">Show
+					Pending Reimbursements</form>
+			</div>
+			<div id="blue" class="colors blue" style="display:none;">
+				<div id="showALL3" style="display: none;">
+
+
+
+
+					<table class="table" style="">
+						<thead>
+
+							<tr>
+								<th scope="col">Manager_ID</th>
+								<th scope="col">Reimbursement Number</th>
+								<th scope="col">Employee_Name</th>
+								<th scope="col">Description</th>
+								<th scope="col">Amount</th>
+								<th scope="col">PostDate</th>
+								<th scope="col">Resolvedate</th>
+								<th scope="col">ReimbursmentStatus</th>
+							</tr>
+
+						</thead>
+						<tbody id="tablebod3">
+						</tbody>
+
+
+					</table>
+				</div>
+
+				<form method="POST">
+					<fieldset>
+						
+						<input id="adminfetch" required autocomplete="off"
+							name="reimbursementid" />
+					</fieldset>
+
+
+					<input type="button"
+						onclick="populateReimbursementsbyId();toggleTable3();"
+						value="search" />
+				</form>
+
+			</div>
+			
+			<div id="purple" class="colors purple"  style="display:none;">
+				
+				<form action="/servletDemo2/create" target="#" method="get">
+				
+				<fieldset>
+				<h1>Request Reimbursement</h1>
+					<h2>Description</h2>
+					<input id="desc" required autocomplete="off"
+						name="description" />
+						<h2>Amount</h2>
+						<input id="amt" required autocomplete="off"
+						name="amount" />
+				</fieldset>
+
+					<input type="submit" value="Submit">
+				
+			</form>
+			</div>
+					
+					
+				</div>
+			
+			
+			
+			
+			
+
+			<form action="/servletDemo2/approvedeny" target="#" method="get">
+				
+				<fieldset>
+				<h1>Enter Reimbursement Status Adjustments</h1>
+					
+					<input id="statusselect" required autocomplete="off"
+						name="reimbursementid" />
+				</fieldset>
+
+				<input type="radio" name="nuStatus" value="APPROVED"> Accept
+				<input type="radio" name="nuStatus" value="DENIED"> Reject
+				<p>
+					<input type="submit" value="Submit">
+				</p>
+			</form>
+			
+			
+		
+
+		<form action="logout " method="get" style="padding: 2%; float: right;">
+			<input type="submit" value="logout " />
+		</form>
+		</div>
+		<footer>
+			2019 FooBar & Co<span
+				style="font-family: 'Courier New', Courier, monospace">&#153</span>
+		</footer>
+</body>
+
+
+</html>
